@@ -1,0 +1,30 @@
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+    // write your code here  
+    Scanner scn = new Scanner(System.in);
+    int num = scn.nextInt();
+    
+    print_fib_num(num);
+   }
+   public static void print_fib_num(int num){
+       if(num ==1){
+           System.out.println(0);
+       }
+       if(num == 2){
+           System.out.println(1);
+       }
+       if(num > 2){
+           int n1 = 0;
+           int n2 =1;
+           for(int i=3 ; i<=num ; i++){
+               int n3 = n1 + n2;
+               n1 = n2 ;
+               n2 = n3 ;
+           }
+           System.out.println("The fibonacci of " + num + " is ---> "  + n2);
+       }
+   }
+  }
