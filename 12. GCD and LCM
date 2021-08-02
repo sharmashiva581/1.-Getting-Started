@@ -1,0 +1,29 @@
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here  
+      Scanner scn = new Scanner(System.in);
+      int n1 = scn.nextInt();
+      int n2 = scn.nextInt();
+      
+      int divident = n2;
+      int divisor = n1;
+      
+      // Finding GCD using long division method
+      
+      while(divident % divisor !=0){
+          int rem = divident % divisor;
+          divident = divisor;
+          divisor = rem;
+      }
+      int gcd = divisor;
+      System.out.println(gcd); // <----- GCD
+      
+      // Now finding LCM
+      
+      int lcm = (n1 * n2) / gcd;
+      System.out.println(lcm);
+     }
+    }
