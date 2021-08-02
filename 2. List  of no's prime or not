@@ -1,0 +1,33 @@
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+  
+       // write ur code here ****** BEST FINAL *************
+       int t = scn.nextInt();
+       for(int i=1 ; i<=t ; i++){
+           int num = scn.nextInt();
+           
+           int tf = 1; // total factor
+           
+           for(int div =2 ; div*div <= num ; div++){
+               if(num % div ==0){
+                   tf+=1;
+                   if(tf >1){
+                       break;
+                   }
+               }
+               
+           }
+           if(tf ==1){
+               System.out.println("prime");
+           }
+           else{
+               System.out.println("not prime");
+           }
+       }
+  
+   }
+  }
