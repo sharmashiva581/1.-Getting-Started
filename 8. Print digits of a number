@@ -1,0 +1,23 @@
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here  
+      Scanner scn = new Scanner(System.in);
+      int num = scn.nextInt();
+      
+      print_digits_of_a_no(num);
+     }
+     public static void  print_digits_of_a_no(int num){
+         while(num > 0){
+             int digit = num % 10;
+             num = num /10;
+             print_digits_of_a_no(num);
+              System.out.println(digit);
+              return;
+             
+         }
+        
+     }
+    }
