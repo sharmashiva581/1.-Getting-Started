@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int lo = scn.nextInt();
+        int hi = scn.nextInt();
+        
+        for(int i= lo ; i<= hi ; i++){
+            int num = i;
+            int tf  = 1;
+            
+            for(int div = 2 ; div*div <= num ; div++){
+                if(num % div ==0){
+                    tf +=1;
+                    if(tf>1){
+                        break;
+                    }
+                }
+            }
+            if(tf ==1){
+                System.out.println(num);
+            }
+            else{
+                // do ntng
+            }
+        }
+    }
+}
