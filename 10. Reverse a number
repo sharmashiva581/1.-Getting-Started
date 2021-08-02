@@ -1,0 +1,34 @@
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     // write your code here  
+     Scanner scn = new Scanner(System.in);
+     int num = scn.nextInt();
+     int k= scn.nextInt();
+     
+     
+     // calculate no of digits
+     int count = 0;
+     int temp = num;
+     while(temp > 0){
+         temp = temp / 10;
+         count +=1;
+     }
+     
+     
+         k = k % count;
+     
+     
+      if(k < 0 ){ // for negative cases
+ 	 	     k =  count + k;
+ 	 	 }
+     
+     int b= num % (int)Math.pow(10 , k);
+     int a = num / (int) Math.pow(10 , k);
+     
+     int ans = b * (int)Math.pow(10 , count-k) + a ;
+     System.out.println(ans);
+    }
+   }
