@@ -14,19 +14,19 @@ import java.util.*;
    public static void fib_till_n(int num){
        int n1 = 0;
        int n2 = 1;
-        if( num ==1){
+        if( num ==0){
             System.out.println(0);
        }
-       if(num ==2){
+       if(num ==1){
            System.out.println(0);
            System.out.println(1);
            
        }
-       if(num > 2){
+       if(num > 1){
             System.out.println(0);
            System.out.println(1);
            
-           for(int i=3 ; i<=num ; i++){
+           for(int i=2 ; i<num ; i++){
            int n3 = n1 + n2;
            n1 = n2;
            n2 = n3;
